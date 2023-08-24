@@ -1,0 +1,435 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* font-family: 'Inter', sans-serif; */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #0A0A0A;
+    background: #F5F5F7;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 700;
+}
+
+h1, h2 {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+h1 {
+    font-size: 64px;
+    color: #490E84;
+}
+
+h2 {
+    font-size: 32px;
+    color: #717171;
+    position: relative;
+    z-index: 2;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+p {
+    line-height: 130%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+input {
+    background-color: transparent;
+    border: none; /* Убирает рамку */
+    outline: none; /* Убирает обводку при фокусе (подсветку) */
+}
+
+/*Шапка*/
+
+header {
+    background-color: #0A0A0A;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 33px 0;
+    font-size: 24px;
+    color: #717171;
+}
+
+.burger-menu {
+    display: none;
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+.nav a:hover, .footer-wrap a:hover {
+    opacity: 0.9;
+}
+
+.nav-list {
+    flex-grow: 1;
+    flex-basis: 0;
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.phone-number {
+    flex-grow: 1; /*Узнай что это*/
+    flex-basis: 0;
+    text-align: right;
+}
+
+/* headline */
+
+.headline {
+    padding-top: 71px;
+}
+
+.headline-wrap {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+}
+.headline img {
+    margin: 0 auto;
+}
+
+.choose-button {
+    display: block;
+    margin: 0 auto;
+    width: 350px;
+    height: 70px;
+    line-height: 70px;
+    border-radius: 30px;
+    background: #490E84;
+    color: #FFF;
+    text-align: center;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: all 0.5s ease;
+}
+.choose-button:hover {
+    background: #350961;
+    color: #F5F5F5;
+}
+
+/*Секция обновления телефона*/
+
+.news {
+    padding-top: 127px;
+}
+
+.news-wrap {
+    padding-top: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.news-wrap img {
+    transition: all 0.5s ease;
+}
+.news-wrap img:hover {
+    transform: scale(110%);
+}
+
+.news-text {
+    width: 550px;
+    margin-right: 191px;
+}
+
+.news-text p:not(:first-of-type) {
+    margin-top: 30px;
+}
+
+.news-important {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/*Секция с выбором телефона*/
+
+.choosing-phone {
+    padding-top: 150px;
+}
+
+.phones-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.phone p, .phone h3 {
+   text-align: center;
+   position: relative;
+   z-index: 2;
+}
+
+.phone h3 {
+    padding-bottom: 10px;
+}
+
+.phone img {
+    transition: all 0.5s ease;
+}
+.phone img:hover {
+    transform: scale(110%);
+}
+
+/*Секция заказа*/
+
+.order {
+    padding-top: 150px;
+}
+
+.order-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #574B63;
+}
+.order-wrap img {
+    width: 50%;
+}
+
+.order-form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-left: 93px;
+}
+
+.order-form h2 {
+    padding-bottom: 70px;
+    color: #FFF;
+}
+
+.order-form input {
+    width: 400px;
+    border-bottom: 1px #F5F5F5 solid;
+    padding-bottom: 10px;
+    color: #FFF;
+}
+input::placeholder {
+    color: #FFF;
+    opacity: 0.5;
+}
+
+.order-form label {
+    color: #FFF;
+    opacity: 0.5;
+    text-align: center;
+}
+
+.order-button {
+    margin: 0 auto;
+    padding: 16px 81px;
+    width: 240px;
+    background: #FFF;
+    border: 0;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #490E84;
+    transition: all 0.5s ease;
+}
+.order-button:hover {
+    cursor: pointer;
+    background: #490E84;
+    color: #FFF;
+}
+
+/*Подвал*/
+footer {
+   background: #0A0A0A; 
+}
+
+.footer-wrap {
+    padding: 40px 0;
+    color: #717171;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-wrap .phone-number {
+    font-size: 24px;
+}
+
+.polit-text {
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+/*Responsive*/
+@media (max-width: 1199px) {
+    .container {
+        max-width: 960px;
+    }
+
+    .order-form {
+        margin: 0 auto;
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 991px) {
+    .container {
+        max-width: 720px;
+        margin: 0 auto;
+    }
+
+    .nav {
+        padding: 33px 0;
+        font-size: 16px;
+    }
+
+    .nav-list {
+        gap: 20px;
+    }
+
+    .headline img {
+        width: 100%;
+    }
+
+    .news-wrap {
+        padding-top: 50px;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    
+    .news-text {
+        position: relative;
+        z-index: 2;
+        width: 550px;
+        margin-right: 0;
+    }
+
+
+    .phones-list {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .order-form {
+        padding: 15px 0;
+    }
+
+    .order-form h2 {
+        padding-bottom: 20px;
+        font-size: 24px;
+    }
+
+    .order-form input {
+        width: 300px;
+        padding-left: 10px;
+    }
+
+    .news, .choosing-phone, .order {
+        padding-top: 80px;
+    }
+
+    .news-wrap {
+        padding-top: 25px;
+    }
+    
+    .phone-number a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 720px) {
+    .container {
+        max-width: 540px;
+    }
+
+    /* .order-wrap {
+        flex-direction: column-reverse;
+       
+    } */
+
+    .order-wrap {
+        padding: 30px 0;
+    }
+
+    .order-wrap img {
+        display: none;
+    }
+
+}
+
+@media (max-width: 575px) {
+    .container{
+        max-width: 90%;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    .choose-button {
+        width: 300px;
+    }
+
+    .news-wrap img {
+        width: 80%;
+    }
+    .news-wrap img:hover {
+        transform: scale(100%);
+    }
+
+    .order-wrap {
+        flex-direction: column-reverse;
+        padding-top: 0;
+    }
+
+    .order-wrap img {
+        width: 100%;
+        display: block;
+    }
+
+    .news-text {
+        width: 300px;
+    }
+
+    .nav-list {
+        display: none;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    .phone-number a {
+        font-size: 14px;
+    }
+
+    .polit-text {
+        font-size: 12px;
+    }
+}
